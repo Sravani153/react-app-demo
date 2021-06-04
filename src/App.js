@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import {Navbar, NavbarBrand, NavLink} from 'reactstrap';
+import Menu from './components/MenuComponent';
 import './App.css';
 
-function App() {
+ function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar dark  color="success">
+        <div className="container">
+          <NavbarBrand href="/">Droid Cafe</NavbarBrand>
+          <NavLink href="/home" className="active">Home</NavLink>
+          <NavLink href="/about">About this</NavLink>
+        </div>
+      </Navbar>
+       <Menu />  
     </div>
   );
 }
-
 export default App;
